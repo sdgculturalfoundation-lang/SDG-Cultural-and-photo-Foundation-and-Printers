@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SDG Cultural and Photo Foundation | Home layout</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Figtree:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#faf7f0;--ink:#1b2a22;--muted:#56625a;--card:#fff;--line:#e4dccb;--green:#1f4d36;--green-d:#143524;--gold:#c8962e;--terra:#b5532f;--on-green:#fff;--soft:#f1ebdc;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101a14;--ink:#eef0e8;--muted:#a3b0a6;--card:#17251d;--line:#2a3b30;--green:#2f7a52;--green-d:#0b140f;--soft:#1a2a20}}
+:root[data-theme="dark"]{--bg:#101a14;--ink:#eef0e8;--muted:#a3b0a6;--card:#17251d;--line:#2a3b30;--green:#2f7a52;--green-d:#0b140f;--soft:#1a2a20}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.6 Figtree,system-ui,sans-serif}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15;margin:0 0 .6rem}
+h1{font-size:clamp(2.1rem,5vw,3.6rem)}h2{font-size:clamp(1.6rem,3vw,2.3rem)}h3{font-size:1.2rem}
+p{margin:0 0 1rem;max-width:62ch}a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 1.25rem}
+section{padding:4.5rem 0}
+.btn{display:inline-block;padding:.75rem 1.4rem;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--green);background:var(--green);color:var(--on-green);cursor:pointer;font-size:1rem}
+.btn.alt{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:#1b2a22}
+.btn.sm{padding:.45rem 1rem;font-size:.9rem}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.topbar{background:var(--green-d);color:#e8eadf;font-size:.85rem;padding:.45rem 0}
+.topbar .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:70px}
+.logo{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:1.15rem;text-decoration:none;line-height:1.1}
+.logo small{display:block;font:500 .72rem Figtree,sans-serif;color:var(--muted)}
+nav ul{display:flex;gap:1.4rem;list-style:none;margin:0;padding:0}
+nav a{text-decoration:none;font-weight:500}nav a:hover{color:var(--terra)}
+#menuBtn{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:.4rem .7rem;color:var(--ink);font-size:1rem}
+.weave{height:14px;background:repeating-linear-gradient(90deg,var(--terra) 0 18px,var(--gold) 18px 30px,var(--green) 30px 48px,var(--bg) 48px 54px)}
+.hero{padding:4rem 0 3.5rem}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+.hero ul{padding:0;list-style:none;margin:0 0 1.6rem}
+.hero li{padding-left:1.6rem;position:relative;margin:.3rem 0}
+.hero li::before{content:"";position:absolute;left:0;top:.55em;width:.8rem;height:.8rem;border-radius:50%;background:var(--gold)}
+.btns{display:flex;gap:.8rem;flex-wrap:wrap}
+.art{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:200px 150px;gap:.8rem}
+.ph{border-radius:14px;display:flex;align-items:flex-end;padding:.8rem;color:#fff;font-weight:600;font-size:.9rem;min-height:100px}
+.ph.g{background:linear-gradient(160deg,#2f7a52,#143524)}.ph.t{background:linear-gradient(160deg,#c9683f,#7d3318)}.ph.y{background:linear-gradient(160deg,#d9a63a,#8a6212)}.ph.k{background:linear-gradient(160deg,#3a4a41,#18221c)}
+.art .ph:first-child{grid-row:span 2}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem}
+.step{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:12px;padding:1.4rem}
+.step b{font-family:Fraunces,serif;color:var(--terra);font-size:1.4rem}
+.band{background:var(--soft)}
+.head{max-width:680px;margin-bottom:2rem}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.3rem;display:flex;flex-direction:column}
+.card .n{font:700 1.8rem Fraunces,serif;color:var(--gold)}
+.card p{font-size:.93rem;color:var(--muted);flex:1}
+.card .row{display:flex;gap:.5rem;flex-wrap:wrap}
+.stats{background:var(--green);color:var(--on-green);padding:3rem 0}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;text-align:center}
+.stats b{display:block;font:700 2.6rem Fraunces,serif;color:#f0cd7a}
+.books{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.cover{aspect-ratio:3/4;border-radius:8px 14px 14px 8px;padding:1rem;color:#fff;display:flex;flex-direction:column;justify-content:space-between;font-family:Fraunces,serif;font-weight:700;box-shadow:inset 8px 0 0 rgba(0,0,0,.25);margin-bottom:.8rem}
+.price{font-weight:600;color:var(--terra);margin:0 0 .6rem}
+.tabs{display:flex;gap:.5rem;margin-bottom:1.5rem}.tabs span{padding:.35rem .9rem;border:1px solid var(--line);border-radius:999px;font-size:.9rem}.tabs .on{background:var(--ink);color:var(--bg)}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem}.gal .ph{aspect-ratio:1;font-size:1rem}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+blockquote{margin:0;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem}
+blockquote footer{font-size:.88rem;color:var(--muted)}
+.contact{display:grid;grid-template-columns:1fr 1.1fr;gap:3rem}
+form{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.6rem;display:grid;gap:.9rem}
+label{font-weight:500;font-size:.92rem;display:grid;gap:.3rem}
+input[type=text],input[type=email],input[type=tel],textarea{font:inherit;padding:.65rem .8rem;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+.checks{display:flex;gap:.5rem 1.1rem;flex-wrap:wrap;border:0;padding:0;margin:0}.checks legend{font-weight:500;font-size:.92rem;margin-bottom:.4rem}.checks label{display:flex;gap:.4rem;font-weight:400}
+.map{margin-top:1.4rem;border-radius:14px;min-height:170px;background:repeating-linear-gradient(45deg,var(--soft) 0 14px,var(--line) 14px 15px);display:flex;align-items:center;justify-content:center;color:var(--muted);text-align:center;padding:1rem}
+#ok{display:none;background:var(--soft);padding:.8rem;border-radius:8px}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1rem 1.3rem;margin-bottom:.7rem}
+summary{font-weight:600;cursor:pointer}details p{margin:.6rem 0 0;color:var(--muted)}
+footer.site{background:var(--green-d);color:#dfe3d6;padding:3.5rem 0 2rem}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1.2fr;gap:2.5rem}
+footer.site a{display:block;text-decoration:none;margin:.3rem 0}footer.site h3{color:#fff}
+.news{display:flex;gap:.5rem;margin-top:.5rem}.news input{flex:1;min-width:0}
+.pay{display:flex;gap:.5rem;margin-top:1.2rem;flex-wrap:wrap}.pay span{border:1px solid #4b6455;border-radius:6px;padding:.2rem .6rem;font-size:.82rem;font-weight:600}
+.copy{border-top:1px solid #2c4436;margin-top:2rem;padding-top:1rem;font-size:.85rem}
+.float{position:fixed;right:1rem;z-index:40;border:0;border-radius:999px;padding:.8rem 1.1rem;font-weight:600;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.3);cursor:pointer;font:600 .95rem Figtree,sans-serif}
+#wa{bottom:calc(1rem + env(safe-area-inset-bottom,0px));background:#1f9d55;color:#fff}
+#as{bottom:calc(4.6rem + env(safe-area-inset-bottom,0px));background:var(--gold);color:#1b2a22}
+#panel{display:none;position:fixed;right:1rem;bottom:calc(8.2rem + env(safe-area-inset-bottom,0px));width:min(300px,calc(100% - 2rem));background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1rem;z-index:40;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+#panel p{font-size:.92rem;margin-bottom:.6rem}
+@media (max-width:960px){.cards,.books,.gal{grid-template-columns:repeat(2,1fr)}.hero .wrap,.contact,.fgrid,.steps,.quotes{grid-template-columns:1fr}.stats .wrap{grid-template-columns:repeat(2,1fr)}
+#menuBtn{display:block}nav{display:none;position:absolute;top:70px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);padding:1rem 1.25rem}nav.open{display:block}nav ul{flex-direction:column;gap:.8rem}header .btn{display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span>Preserving Plateau culture through books, photography and heritage</span><span>info@yourdomain.org · Jos, Plateau State, Nigeria</span></div></div>
+<header><div class="wrap">
+<a class="logo" href="#top">SDG Cultural &amp; Photo Foundation<small>Jos-South, Plateau State</small></a>
+<button id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav id="nav" aria-label="Main"><ul><li><a href="#about">About</a></li><li><a href="#books">Books</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#services">Facilities</a></li><li><a href="#insights">Insights</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+<a class="btn sm gold" href="#books">Buy a Book</a>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+<div>
+<h1>Tourism knowledge and Plateau heritage, in print and in picture</h1>
+<p>SDG Cultural and Photo Foundation publishes tourism textbooks, documents traditional attire and opens its indoor and outdoor spaces to cultural events and photography.</p>
+<ul><li>Tourism textbooks for students and professionals</li><li>Traditional attire documented and showcased</li><li>Event and photo spaces you can book</li></ul>
+<div class="btns"><a class="btn" href="#contact">Send us a message</a><a class="btn alt" href="https://wa.me/2340000000000">WhatsApp us</a></div>
+</div>
+<div class="art" role="img" aria-label="Placeholder tiles for a tourism book, traditional attire and a facility">
+<div class="ph g">Tourism books</div><div class="ph t">Traditional attire</div><div class="ph y">Our facilities</div>
+</div>
+</div></div>
+<div class="weave" aria-hidden="true"></div>
+
+<section id="about"><div class="wrap">
+<div class="head"><h2>Why culture and tourism education matter</h2>
+<p>Communities that know their own story welcome visitors with confidence. We turn that story into books, images and spaces that students, travellers and families can use.</p></div>
+<div class="steps">
+<div class="step"><b>01</b><h3>Discover</h3><p>We research the dress, crafts and landmarks of Plateau State and the wider region.</p></div>
+<div class="step"><b>02</b><h3>Preserve</h3><p>We record what we find in photographs and publish it in textbooks and digital editions.</p></div>
+<div class="step"><b>03</b><h3>Share</h3><p>We bring it to classrooms, events and visitors through our books and facilities.</p></div>
+</div></div></section>
+
+<section class="band" id="services"><div class="wrap">
+<div class="head"><h2>What we offer</h2><p>Eight ways to work with the Foundation.</p></div>
+<div class="cards">
+<div class="card"><span class="n">01</span><h3>Tourism textbooks</h3><p>Course books written for Nigerian tourism students.</p><div class="row"><a class="btn sm alt" href="#books">View detail</a><a class="btn sm" href="#contact">Enquire</a></div></div>
+<div class="card"><span class="n">02</span><h3>Traditional attire showcase</h3><p>Exhibitions and displays of regional dress.</p><div class="row"><a class="btn sm alt" href="#gallery">View detail</a><a class="btn sm" href="#contact">Enquire</a></div></div>
+<div class="card"><span class="n">03</span><h3>Cultural photography</h3><p>Portraits, events and heritage documentation.</p><div class="row"><a class="btn sm alt" href="#gallery">View detail</a><a class="btn sm" href="#contact">Enquire</a></div></div>
+<div class="card"><span class="n">04</span><h3>Indoor facility hire</h3><p>A hall for training, meetings and small events.</p><div class="row"><a class="btn sm alt" href="#contact">View detail</a><a class="btn sm" href="#contact">Enquire</a></div></div>
+<div class="card"><span class="n">05</span><h3>Outdoor facility hire</h3><p>Open grounds for shoots, ceremonies and gatherings.</p><div class="row"><a class="btn sm alt" href="#contact">View detail</a><a class="btn sm" href="#contact">Enquire</a></div></div>
+<div class="card"><span class="n">06</span><h3>Workshops and training</h3><p>Hands-on sessions in tourism, culture and photography.</p><div class="row"><a class="btn sm alt" href="#contact">View detail</a><a class="btn sm" href="#contact">Enquire</a></div></div>
+<div class="card"><span class="n">07</span><h3>Digital book downloads</h3><p>Buy a soft copy and download it from your library.</p><div class="row"><a class="btn sm alt" href="#books">View detail</a><a class="btn sm" href="#books">Buy</a></div></div>
+<div class="card"><span class="n">08</span><h3>Heritage tours and documentation</h3><p>Guided visits with photo and written records.</p><div class="row"><a class="btn sm alt" href="#contact">View detail</a><a class="btn sm" href="#contact">Enquire</a></div></div>
+</div></div></section>
+
+<div class="stats"><div class="wrap">
+<div><b>00+</b>Years active</div><div><b>00</b>Books published</div><div><b>00+</b>Events hosted</div><div><b>00+</b>Communities reached</div>
+</div></div>
+
+<section id="books"><div class="wrap">
+<div class="head"><h2>Featured books</h2></div>
+<div class="tabs" role="tablist"><span class="on">Hardcopy</span><span>Soft copy (PDF/ePub)</span></div>
+<div class="books">
+<div><div class="cover" style="background:linear-gradient(160deg,#2f7a52,#143524)"><span>Book title one</span><small>Selek Domshak Amos</small></div><p class="price">₦0,000</p><a class="btn sm" href="#contact">Buy now</a></div>
+<div><div class="cover" style="background:linear-gradient(160deg,#c9683f,#7d3318)"><span>Book title two</span><small>Selek Domshak Amos</small></div><p class="price">₦0,000</p><a class="btn sm" href="#contact">Buy now</a></div>
+<div><div class="cover" style="background:linear-gradient(160deg,#d9a63a,#8a6212)"><span>Book title three</span><small>Selek Domshak Amos</small></div><p class="price">₦0,000</p><a class="btn sm" href="#contact">Buy now</a></div>
+<div><div class="cover" style="background:linear-gradient(160deg,#3a4a41,#18221c)"><span>Book title four</span><small>Selek Domshak Amos</small></div><p class="price">₦0,000</p><a class="btn sm" href="#contact">Buy now</a></div>
+</div></div></section>
+
+<section class="band" id="gallery"><div class="wrap">
+<div class="head"><h2>From the gallery</h2></div>
+<div class="gal"><div class="ph g">Tourism books</div><div class="ph t">Traditional attire</div><div class="ph y">Indoor facility</div><div class="ph k">Outdoor facility</div></div>
+<p style="margin-top:1.4rem"><a class="btn alt" href="#gallery">Open full gallery</a></p>
+</div></section>
+
+<section id="insights"><div class="wrap">
+<div class="head"><h2>What people say</h2></div>
+<div class="quotes">
+<blockquote><p>“Testimonial text goes here.”</p><footer>Customer name, role</footer></blockquote>
+<blockquote><p>“Testimonial text goes here.”</p><footer>Customer name, role</footer></blockquote>
+<blockquote><p>“Testimonial text goes here.”</p><footer>Customer name, role</footer></blockquote>
+</div></div></section>
+
+<section class="band" id="contact"><div class="wrap contact">
+<div>
+<h2>Tell us what you need</h2>
+<p>Ask about books, bookings or a workshop. We reply within one working day.</p>
+<p><b>Office</b><br>Kwata-Zawan, adjacent COCIN Church, along Vom Road, Jos-South LGA, Plateau State, Nigeria</p>
+<div class="map">Map goes here. Embed Google Maps for the office address.</div>
+</div>
+<form id="enq">
+<label>Your name<input type="text" required></label>
+<label>Phone or WhatsApp<input type="tel" required></label>
+<label>Email<input type="email"></label>
+<fieldset class="checks"><legend>I’m interested in</legend>
+<label><input type="checkbox"> Books</label><label><input type="checkbox"> Attire showcase</label><label><input type="checkbox"> Photography</label><label><input type="checkbox"> Indoor hall</label><label><input type="checkbox"> Outdoor space</label><label><input type="checkbox"> Workshops</label></fieldset>
+<label>Message<textarea rows="4" required></textarea></label>
+<button class="btn" type="submit">Send message</button>
+<p id="ok" role="status">Thank you. In the live site this saves to Supabase and emails the admin.</p>
+</form>
+</div></section>
+
+<section><div class="wrap" style="max-width:820px">
+<div class="head"><h2>Frequently asked questions</h2></div>
+<details><summary>How do I buy a soft copy?</summary><p>Pay online with a Visa, Mastercard or Verve card, then download the book from My Library.</p></details>
+<details><summary>Where can I buy a printed copy?</summary><p>Visit our Where to Buy page for sales points, or order online.</p></details>
+<details><summary>Can I book the hall or grounds?</summary><p>Yes. Send an enquiry with your date and event type and we will confirm availability.</p></details>
+<details><summary>Which payment methods do you accept?</summary><p>Visa, Mastercard, Verve, bank transfer and USSD through Paystack.</p></details>
+<details><summary>Do you run workshops?</summary><p>Yes, in tourism, culture and photography. Ask us for the next dates.</p></details>
+</div></section>
+</main>
+
+<footer class="site"><div class="wrap">
+<div class="fgrid">
+<div><h3>SDG Cultural &amp; Photo Foundation</h3><p>Kwata-Zawan, adjacent COCIN Church, along Vom Road, Jos-South LGA, Plateau State, Nigeria</p><p>CEO: Selek Domshak Amos</p>
+<div class="pay" aria-label="Accepted payments"><span>Visa</span><span>Mastercard</span><span>Verve</span></div></div>
+<div><h3>Quick links</h3><a href="#about">About</a><a href="#books">Books</a><a href="#gallery">Gallery</a><a href="#services">Facilities</a><a href="#contact">Contact</a></div>
+<div><h3>Newsletter</h3><p>Culture and tourism notes, monthly.</p><div class="news"><input type="email" placeholder="Your email" aria-label="Email"><button class="btn gold sm">Sign up</button></div></div>
+</div>
+<div class="copy">© 2026 SDG Cultural and Photo Foundation. All rights reserved. · Privacy · Terms · Refund policy</div>
+</div></footer>
+
+<div id="panel" role="dialog" aria-label="Assistant"><p><b>Need help?</b><br>Ask a question or request a callback.</p><a class="btn sm" href="#contact">Request a callback</a></div>
+<button class="float" id="as" aria-expanded="false" aria-controls="panel">Assistant</button>
+<a class="float" id="wa" href="https://wa.me/2340000000000">WhatsApp</a>
+
+<script>
+var m=document.getElementById('menuBtn'),n=document.getElementById('nav');
+m.onclick=function(){var o=n.classList.toggle('open');m.setAttribute('aria-expanded',o)};
+n.onclick=function(){n.classList.remove('open')};
+var a=document.getElementById('as'),p=document.getElementById('panel');
+a.onclick=function(){var s=p.style.display==='block';p.style.display=s?'none':'block';a.setAttribute('aria-expanded',!s)};
+document.getElementById('enq').onsubmit=function(e){e.preventDefault();document.getElementById('ok').style.display='block'};
+</script>
+</body>
+</html>
